@@ -1,0 +1,212 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Evita barras de rolagem horizontal indesejadas */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    width: 100%;
+    height: 65px;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5%;
+}
+
+/* Logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.simbolo {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: -5px;
+}
+
+.nome-logo {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Menu horizontal */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #f5b400;
+}
+
+/* Ícones */
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icones a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Banner principal (Computador e padrão) */
+.banner {
+    width: 100%;
+    min-height: 1050px; /* Altura ideal para desktop */
+    min-width: 400px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("imagens/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Conteúdo sobre a imagem */
+.conteudo-banner {
+    color: #ffffff;
+    width: 100%;
+}
+
+.conteudo-banner h1 {
+    font-size: clamp(60px, 12vw, 140px);
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: -6px;
+}
+
+.subtitulo {
+    font-size: clamp(16px, 2.5vw, 24px);
+    letter-spacing: 4px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Botão de compra */
+.botao {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #222222;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao:hover {
+    background-color: #f5b400;
+    color: #000000;
+}
+
+/* Rodapé */
+.rodape {
+    width: 100%;
+    min-height: 60px;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVIDADE PARA CELULARES (Mobile)
+   ========================================= */
+@media (max-width: 768px) {
+    .cabecalho {
+        height: auto;
+        min-height: 65px;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+        justify-content: space-between;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .banner {
+        min-height: 380px; /* Altura menor e adequada para telas de celular */
+        padding: 250px;
+    }
+
+    .conteudo-banner h1 {
+        font-size: clamp(50px, 15vw, 90px);
+        letter-spacing: -4px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nome-logo {
+        font-size: 11px;
+    }
+
+    .simbolo {
+        font-size: 26px;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .banner {
+        min-height: 450px;
+    }
+}
